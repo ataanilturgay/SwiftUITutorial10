@@ -7,18 +7,6 @@
 
 import Foundation
 
-public typealias JSON = [String: Any]
-public typealias HTTPHeaders = [String: String]
-
-/// 0e51d390-56d3-4149-97d8-5e7369619880
-
-public enum RequestMethod: String {
-    case get = "GET"
-    case post = "POST"
-    case put = "PUT"
-    case delete = "DELETE"
-}
-
 public class APIClient {
     static let shared = APIClient()
     
