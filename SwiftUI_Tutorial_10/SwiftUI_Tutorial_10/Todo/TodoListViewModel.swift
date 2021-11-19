@@ -20,7 +20,7 @@ class TodoListViewModel: ObservableObject {
     func fetchTodoList() {
         self.isLoading = true
         
-        let url = URL(string: "https://jsonplaceholder.typicode.com/todosgdgdf")
+        let url = URL(string: "https://jsonplaceholder.typicode.com/todos")
         APIClient.shared.fetchTodoList(url: url) { [weak self] result in
             
             guard let self = self else { return }
