@@ -8,6 +8,7 @@
 import Foundation
 
 public enum APIError: Error, CustomStringConvertible {
+    
     case badURL
     case url(URLError?)
     case parsing(DecodingError?)

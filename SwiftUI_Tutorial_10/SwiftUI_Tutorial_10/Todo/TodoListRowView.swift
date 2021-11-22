@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct TodoListRowView: View {
+    
     let todo: TodoModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("\(todo.title) - \(todo.userId)")
@@ -18,8 +20,8 @@ struct TodoListRowView: View {
 }
 
 struct TodoListRowView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        
         TodoListRowView(todo: TodoModel(userId: 123,
                                         id: 11423432,
                                         title: "Title",

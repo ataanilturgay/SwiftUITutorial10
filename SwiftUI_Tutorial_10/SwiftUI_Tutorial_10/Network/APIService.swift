@@ -8,6 +8,7 @@
 import Foundation
 
 public class APIClient {
+    
     static let shared = APIClient()
     
     func fetch<T: Decodable>(_ type: T.Type, url: URL?, completion: @escaping(Result<T, APIError>) -> Void) {
@@ -25,7 +26,7 @@ public class APIClient {
                 do {
                     let result = try decoder.decode(type, from: data)
                     completion(Result.success(result))
-                }catch {
+                } catch {
                     completion(Result.failure(APIError.parsing(error as? DecodingError)))
                 }
             }
